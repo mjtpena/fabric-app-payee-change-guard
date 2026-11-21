@@ -1,0 +1,107 @@
+1
+00:00:03,202 --> 00:00:06,708
+Supplier bank-detail fraud starts with one email asking a
+
+2
+00:00:06,708 --> 00:00:09,352
+clerk to change where a supplier gets paid.
+
+3
+00:00:09,802 --> 00:00:12,616
+Here every change rises through a lock
+
+4
+00:00:12,616 --> 00:00:16,912
+flight: request, call-back, second approval, then release.
+
+5
+00:00:18,011 --> 00:00:21,870
+Each boat is a change request in the chamber of the gate
+
+6
+00:00:21,870 --> 00:00:26,281
+it has reached; pennants are red flags, and this one flies four.
+
+7
+00:00:27,087 --> 00:00:29,649
+Switch the lens to flags and every hull
+
+8
+00:00:29,649 --> 00:00:32,277
+is painted by how many flags it carries.
+
+9
+00:00:33,078 --> 00:00:37,488
+Today ranks what needs attention: the four-flag change, one account
+
+10
+00:00:37,488 --> 00:00:41,108
+shared by two suppliers, and a call-back still waiting.
+
+11
+00:00:41,558 --> 00:00:44,758
+Choosing an item flies me to the boat behind it.
+
+12
+00:00:45,566 --> 00:00:48,997
+A domestic payment run is due tomorrow, so the second key
+
+13
+00:00:48,997 --> 00:00:52,066
+is frozen, and the sign says exactly when it opens.
+
+14
+00:00:52,879 --> 00:00:57,029
+View as a clerk, and only the call-backs waiting on me stay lit.
+
+15
+00:00:59,585 --> 00:01:02,895
+The call-back screen shows only the number already
+
+16
+00:01:02,895 --> 00:01:05,345
+on file, never the one in the letter.
+
+17
+00:01:05,795 --> 00:01:08,858
+Dial the number from the letter instead, and the app
+
+18
+00:01:08,858 --> 00:01:11,745
+says plainly that this call cannot open the gate.
+
+19
+00:01:12,549 --> 00:01:16,999
+Sam raised the Lindqvist change, so the second key refuses him.
+
+20
+00:01:17,799 --> 00:01:22,269
+Jordan, the finance controller, sees every flag with its reason,
+
+21
+00:01:22,269 --> 00:01:26,389
+including the account already on file for another supplier.
+
+22
+00:01:26,839 --> 00:01:30,164
+With four flags up, approving needs a written
+
+23
+00:01:30,164 --> 00:01:33,489
+override reason, and it goes into the ledger.
+
+24
+00:01:34,295 --> 00:01:36,787
+The second key turns, the gate opens, and
+
+25
+00:01:36,787 --> 00:01:39,035
+the boat rises into the next chamber.
+
+26
+00:01:41,350 --> 00:01:44,371
+A known number, a second person, a freeze before
+
+27
+00:01:44,371 --> 00:01:47,770
+every run, and no full account number stored anywhere.

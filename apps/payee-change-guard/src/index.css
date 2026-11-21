@@ -1,0 +1,218 @@
+@import 'tailwindcss';
+@import '@x10/shared/styles.css';
+@source "../../../shared/src";
+
+/* ------------------------------------------------------------------ canal tokens (both themes) */
+
+:root {
+  /* Stone, timber and water of the lock flight. */
+  --pcg-stone: #e3dccb;
+  --pcg-stone-2: #d3cab5;
+  --pcg-stone-line: rgb(90 76 50 / 0.16);
+  --pcg-earth: #d9cfb9;
+  --pcg-earth-2: #cbbfa5;
+  --pcg-grass: #b9d5a8;
+  --pcg-grass-2: #9fc58f;
+  --pcg-timber: #8a6a48;
+  --pcg-timber-2: #6e5236;
+  --pcg-water-top: #a9d3e6;
+  --pcg-water-deep: #6fa8c6;
+  --pcg-water-front: rgb(122 178 210 / 0.5);
+  --pcg-wave: rgb(255 255 255 / 0.7);
+  --pcg-ice: #e8f6fd;
+  --pcg-ice-ink: #4b8db3;
+  --pcg-frost: rgb(214 238 250 / 0.82);
+  --pcg-dock: #bfb39a;
+  --pcg-dock-2: #a99c80;
+  --pcg-sign: #f6f1e6;
+  --pcg-sign-ink: #3b342a;
+  --pcg-hill: rgb(170 196 160 / 0.45);
+  --pcg-hill-2: rgb(150 182 142 / 0.4);
+  --pcg-plaque: #e6f4fb;
+  --pcg-plaque-ink: #1d4f6b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --pcg-stone: #2b2a27;
+    --pcg-stone-2: #23221f;
+    --pcg-stone-line: rgb(255 240 210 / 0.07);
+    --pcg-earth: #24221e;
+    --pcg-earth-2: #1d1b18;
+    --pcg-grass: #2a3a2a;
+    --pcg-grass-2: #304630;
+    --pcg-timber: #7a5c3e;
+    --pcg-timber-2: #5c432c;
+    --pcg-water-top: #22506a;
+    --pcg-water-deep: #163447;
+    --pcg-water-front: rgb(40 100 140 / 0.42);
+    --pcg-wave: rgb(190 230 255 / 0.4);
+    --pcg-ice: #cfeaf7;
+    --pcg-ice-ink: #7cc4ea;
+    --pcg-frost: rgb(150 205 235 / 0.35);
+    --pcg-dock: #2f2b25;
+    --pcg-dock-2: #25221d;
+    --pcg-sign: #2d2b27;
+    --pcg-sign-ink: #ece6d8;
+    --pcg-hill: rgb(60 80 64 / 0.35);
+    --pcg-hill-2: rgb(50 70 56 / 0.4);
+    --pcg-plaque: #173548;
+    --pcg-plaque-ink: #d3edf9;
+  }
+}
+
+:root[data-theme='dark'] {
+  --pcg-stone: #2b2a27;
+  --pcg-stone-2: #23221f;
+  --pcg-stone-line: rgb(255 240 210 / 0.07);
+  --pcg-earth: #24221e;
+  --pcg-earth-2: #1d1b18;
+  --pcg-grass: #2a3a2a;
+  --pcg-grass-2: #304630;
+  --pcg-timber: #7a5c3e;
+  --pcg-timber-2: #5c432c;
+  --pcg-water-top: #22506a;
+  --pcg-water-deep: #163447;
+  --pcg-water-front: rgb(40 100 140 / 0.42);
+  --pcg-wave: rgb(190 230 255 / 0.4);
+  --pcg-ice: #cfeaf7;
+  --pcg-ice-ink: #7cc4ea;
+  --pcg-frost: rgb(150 205 235 / 0.35);
+  --pcg-dock: #2f2b25;
+  --pcg-dock-2: #25221d;
+  --pcg-sign: #2d2b27;
+  --pcg-sign-ink: #ece6d8;
+  --pcg-hill: rgb(60 80 64 / 0.35);
+  --pcg-hill-2: rgb(50 70 56 / 0.4);
+  --pcg-plaque: #173548;
+  --pcg-plaque-ink: #d3edf9;
+}
+
+/* ------------------------------------------------------------------ canal motion */
+
+.pcg-bob {
+  animation: pcg-bob 3.6s ease-in-out infinite;
+}
+.pcg-flutter {
+  animation: pcg-flutter 1.9s ease-in-out infinite;
+}
+.pcg-wave {
+  animation: pcg-wave 5.5s linear infinite;
+}
+.pcg-wave-slow {
+  animation: pcg-wave 9s linear infinite reverse;
+}
+.pcg-shimmer {
+  animation: pcg-shimmer 6s ease-in-out infinite;
+}
+.pcg-boat {
+  cursor: pointer;
+  outline: none;
+  transition: opacity 240ms cubic-bezier(0.2, 0, 0, 1);
+}
+.pcg-boat .pcg-lift {
+  transition: transform 180ms cubic-bezier(0.2, 0, 0, 1);
+}
+.pcg-boat:hover .pcg-lift {
+  transform: translateY(-3px);
+}
+.pcg-boat .pcg-focus-ring {
+  opacity: 0;
+  transition: opacity 120ms;
+}
+.pcg-boat:focus-visible .pcg-focus-ring {
+  opacity: 1;
+}
+.pcg-hull {
+  transition: fill 380ms cubic-bezier(0.2, 0, 0, 1);
+}
+.pcg-leaf {
+  transform-box: fill-box;
+  transition: transform 700ms cubic-bezier(0.2, 0, 0, 1);
+}
+.pcg-leaf[data-open='true'] {
+  transform: scaleX(0.18);
+}
+.pcg-surge {
+  animation: pcg-surge 1.8s cubic-bezier(0.2, 0, 0, 1) 1;
+}
+.pcg-halo {
+  animation: pcg-halo 2.2s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes pcg-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1.6px);
+  }
+}
+@keyframes pcg-flutter {
+  0%,
+  100% {
+    transform: skewX(0deg) scaleY(1);
+  }
+  50% {
+    transform: skewX(-9deg) scaleY(0.92);
+  }
+}
+@keyframes pcg-wave {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-40px);
+  }
+}
+@keyframes pcg-shimmer {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+@keyframes pcg-surge {
+  0% {
+    transform: translateY(14px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes pcg-halo {
+  0%,
+  100% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(1.06);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pcg-bob,
+  .pcg-flutter,
+  .pcg-wave,
+  .pcg-wave-slow,
+  .pcg-shimmer,
+  .pcg-surge,
+  .pcg-halo {
+    animation: none;
+  }
+  .pcg-leaf,
+  .pcg-hull,
+  .pcg-boat {
+    transition: none;
+  }
+}
